@@ -297,9 +297,7 @@ div[data-testid="stMarkdownContainer"]{ font-size:clamp(13.5px, 1.6vw, 15px); li
     unsafe_allow_html=True,
 )
 
-# --------------------------------------------------------------------------
 # Session state
-# --------------------------------------------------------------------------
 if "topic" not in st.session_state:
     st.session_state.topic = ""
 if "report" not in st.session_state:
