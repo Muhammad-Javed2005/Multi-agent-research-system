@@ -357,9 +357,8 @@ with st.container(key="hero"):
         unsafe_allow_html=True,
     )
 
-# --------------------------------------------------------------------------
 # Main grid: input card (left) + pipeline card (right)
-# --------------------------------------------------------------------------
+
 left, right = st.columns([1.15, 1], gap="medium")
 
 with left:
