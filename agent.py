@@ -14,9 +14,7 @@ load_dotenv()
 LLM = ChatMistralAI(model="mistral-small-2506", temperature=0.2)
 
 
-# ==========================================
 # 1. Tool-Calling Search Agent
-# ==========================================
 def build_search_agent():
     tools = [web_search]
     prompt = ChatPromptTemplate.from_messages(
@@ -34,9 +32,7 @@ def build_search_agent():
     return AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 
-# ==========================================
 # 2. Tool-Calling Reader Agent
-# ==========================================
 def build_reader_agent():
     tools = [scrape_url]
     prompt = ChatPromptTemplate.from_messages(
@@ -54,9 +50,7 @@ def build_reader_agent():
     return AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 
-# ==========================================
 # 3. Writer Chain
-# ==========================================
 writer_prompt = ChatPromptTemplate.from_messages(
     [
         (
