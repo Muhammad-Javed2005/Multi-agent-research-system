@@ -388,9 +388,7 @@ with right:
         for slot, (num, title, desc) in zip(stage_slots, PIPELINE_STAGES):
             slot.markdown(stage_html(num, title, desc, "idle"), unsafe_allow_html=True)
 
-# --------------------------------------------------------------------------
 # Pipeline execution
-# --------------------------------------------------------------------------
 if run_clicked:
     topic = st.session_state.topic.strip()
     if not topic:
@@ -439,9 +437,7 @@ if run_clicked:
         except Exception as exc:
             st.error(f"Pipeline failed: {exc}")
 
-# --------------------------------------------------------------------------
 # Results
-# --------------------------------------------------------------------------
 if st.session_state.report:
     with st.container(key="results_card"):
         st.markdown(
@@ -460,9 +456,7 @@ if st.session_state.report:
         with tab_critic:
             st.markdown(st.session_state.feedback)
 
-# --------------------------------------------------------------------------
 # Footer
-# --------------------------------------------------------------------------
 st.markdown(
     '<div class="footer">RESEARCHMIND — POWERED BY LANGCHAIN MULTI-AGENT PIPELINE</div>',
     unsafe_allow_html=True,
