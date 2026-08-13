@@ -7,9 +7,8 @@ import streamlit as st
 
 from agent import build_reader_agent, build_search_agent, critic_chain, writer_chain
 
-# --------------------------------------------------------------------------
 # Page configuration
-# --------------------------------------------------------------------------
+
 st.set_page_config(
     page_title="ResearchMind",
     page_icon="favicon.png",
