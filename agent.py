@@ -98,9 +98,7 @@ Structure the report cleanly in Markdown:
 writer_chain = writer_prompt | LLM | StrOutputParser()
 
 
-# ==========================================
 # 4. Critic Chain
-# ==========================================
 critic_prompt = ChatPromptTemplate.from_messages(
     [
         (
